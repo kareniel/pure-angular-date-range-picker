@@ -1,0 +1,47 @@
+
+.config {
+  margin-bottom: 10px;
+}
+
+.section {
+  display: inline-block;
+  vertical-align: top;
+  padding: 10px;
+}
+
+.label {
+  display: block;
+  font-weight: bold;
+  width: 150px;
+}
+
+.input {
+  height: 24px;
+  font-size: 16px;
+}
+
+.radio-label {
+  vertical-align: super;
+}
+
+.ob-datepicker-container, .ob-daypicker-container {
+  position: relative;
+}
+
+ob-daterangepicker, ob-daypicker {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.error-message {
+  position: absolute;
+  color: red;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -20px;
+}
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}

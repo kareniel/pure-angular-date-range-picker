@@ -1,44 +1,56 @@
-**Pure Angular Day & Date Range Pickers**
+**Angular.js Date Range Picker**
 ===================
-A pure Angular (moment.js is the only dependency) day & date range picker, inspired by Dan Grossman's bootstrap-daterangepicker.
+
+This is a fork of Outbrain's really cool [pure Angular day & date range picker](https://github.com/outbrain/pure-angular-date-range-picker), which was inspired by Dan Grossman's bootstrap-daterangepicker.
+
+The core is the same. Here are some of the changes:
+- Drop gulp, protractor, bower
+- Switch bundler to Browserify
+- Switch linter to Standard JS
+- Move example app to it's own folder
+- Set Angular.js as a peer dependency
+
+
+Forked happened at `v0.12.1`.
+
 
 ----------
 
 Installation
 -------------
-bower:  
-`bower install --save ob-daterangepicker`  
-npm:  
-`npm install --save ob-daterangepicker`
+
+`npm install --save angularjs-daterange`
 
 ----------
-
-Date Range Picker
-===================
 
 Usage
--------------
+-----
 
-a. Add the directive js & css to your index.html file:  
-```
-  <link rel="stylesheet" href="bower_components/ob-daterangepicker/dist/styles/ob-daterangepicker.css">
-  <script src="bower_components/ob-daterangepicker/dist/scripts/ob-daterangepicker.js"></script>
-```
+```js
+require('angularjs-daterange')
 
-b. Inject `obDateRangePicker` to your main module:  
-```
-  angular.module('yourModule', ['obDateRangePicker'])
+angular.module('yourModule', ['angularjs-daterange'])
 ```
 
-c. Add the `ob-daterange-picker` directive to your html:  
+```html
+<daterange range="$ctrl.range"></daterange>
 ```
-  <ob-daterangepicker range="vm.range"></ob-daterangepicker>
-```
+
 ----------
+
+!!!
+
+**The rest of the README below has not been ported yet.**
+
+!!!
+
+----------
+
 
 Configurations
 -------------
-All configurations are set through the `ob-daterange-picker` directive attributes or via the `dateRangePickerConfProvider` (see details [here](#date-range-picker-provider)). Here is the list of configurations:  
+
+All configurations are set through the `daterange` directive attributes or via the `dateRangePickerConfProvider` (see details [here](#date-range-picker-provider)). Here is the list of configurations:  
 
 #### **range:**  
 Sets the initial range that would be displayed on the date-range-picker. When, range will be updated this object *will be muted* accordingly.  
